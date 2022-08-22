@@ -7,7 +7,8 @@ Performance on **ogbl-vessel** (10 runs):
 
 | Methods   |  Test Acc  | Valid Acc  |
 |  :----  | ---- | ---- |
-| SAGE+JKNet |   ±  |  ±  |
+| SAGE+JKNet (2-layers) |  0.5001 ± 0.0033  | 0.5013 ± 0.0035  |
+| SAGE+JKNet (3-layers) |  0.5001 ± 0.0007 |  0.5014 ± 0.0004  |
 
 <!-- `TGN-no-mem` achieves top-2 performance on DGraphFin until August, 2022. ([DGraph-Fin Leaderboard](https://dgraph.xinye.com/leaderboards/dgraphfin)) -->
 
@@ -21,6 +22,7 @@ Performance on **ogbl-vessel** (10 runs):
 python==3.8
 torch==1.10.1+cu102
 torch-geometric==2.0.4
+ogb==1.3.4
 ```
 
 - GPU: Tesla V100 (32GB)
@@ -33,11 +35,12 @@ The dataset [ogbl-vessel](https://ogb.stanford.edu/docs/linkprop/#ogbl-vessel) c
 
 ## 2. Usage
 
-Full batch GraphSAGE that aggregates the outputs of each layer with JKNet. 
-- add JKNet (max).
+Full batch [GraphSAGE](https://proceedings.neurips.cc/paper/2017/file/5dd9db5e033da9c6fb5ba83c7a7ebea9-Paper.pdf) that aggregates the outputs of each layer with [JKNet](http://proceedings.mlr.press/v80/xu18c/xu18c.pdf). 
+- add JKNet (max): 3-layers makes the performance more stable (std is lower) compared to raw GraphSAGE.
 - reduce the dimension of hidden channels.
 - set seed for implement.
 - attempt leanrnable embeddings to replace `data.x`, but the performance is low.
+<!-- - modify some other hyper-parameters, such as lr. -->
 
 We can run `SAGE+JKNet` in 10 runs with seed 0-9: 
 
