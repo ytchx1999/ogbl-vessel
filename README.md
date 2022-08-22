@@ -8,7 +8,7 @@ Performance on **ogbl-vessel** (10 runs):
 | Methods   |  Test Acc  | Valid Acc  |
 |  :----  | ---- | ---- |
 | SAGE+JKNet (2-layers) |  0.5001 ± 0.0033  | 0.5013 ± 0.0035  |
-| SAGE+JKNet (3-layers) |  0.5001 ± 0.0007 |  0.5014 ± 0.0004  |
+| **SAGE+JKNet (3-layers)** |  **0.5001 ± 0.0007** |  **0.5014 ± 0.0004**  |
 
 <!-- `TGN-no-mem` achieves top-2 performance on DGraphFin until August, 2022. ([DGraph-Fin Leaderboard](https://dgraph.xinye.com/leaderboards/dgraphfin)) -->
 
@@ -24,9 +24,7 @@ torch==1.10.1+cu102
 torch-geometric==2.0.4
 ogb==1.3.4
 ```
-
 - GPU: Tesla V100 (32GB)
-
 - Params: 273
 
 ### 1.2 Dataset
