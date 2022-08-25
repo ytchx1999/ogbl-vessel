@@ -1,7 +1,7 @@
 cd "$(dirname $0)"
 
 python ../main.py \
---hidden_channel 6 \
+--hidden_channel 8 \
 --num_layer 4 \
 --dropout 0.5 \
 --runs 10 \
