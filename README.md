@@ -6,11 +6,11 @@ This repo is the code on [ogbl-vessel](https://ogb.stanford.edu/docs/linkprop/#o
 Performance on **ogbl-vessel** (10 runs):
 
 | Methods   |  Test AUC  | Valid AUC  |  Params |
-|  :----  | ---- | ---- | ---- |
+|  :----  | :--: | :--: | :----: |
 | SAGE+JKNet (2-layers) |  0.5001 ± 0.0033  | 0.5013 ± 0.0035  | 273 |
 | SAGE+JKNet (3-layers) |  0.5001 ± 0.0007 |  0.5014 ± 0.0004  | 481 |
 | SAGE+JKNet (4-layers) |  0.5003 ± 0.0005 |  0.5009 ± 0.0003  | 689 |
-| **SEAL (no-xfeat)** |   |    | 43714 | 
+| **SEAL (no-xfeat)** |  **0.8077 ± 0.0001** |  **0.8073 ± 0.0001**  | 43714 | 
 
 <!-- 86594 -->
 
